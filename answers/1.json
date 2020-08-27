@@ -1,17 +1,17 @@
 {
   "title": "Question 1:",
-  "description": "I claimed my SNX staking rewards but I don't see them in my wallet?",
+  "description": "What is Switcheo?",
   "color": "0099ff",
-  "url": "https://synthetix.community/docs/staking#i-claimed-my-snx-staking-rewards-but-i-dont-see-them-in-my-wallet",
+  "url": "https://support.switcheo.network/en/articles/2668115-what-is-switcheo",
   "fields": [
     {
       "title": "Answer:",
-      "value": "When you 'claim' in the Rewards tab on Mintr you are assigned your % of SNX in an escrow record in the [RewardEscrow Contract ](https://etherscan.io/address/0xb671F2210B1F6621A2607EA63E6B2DC3e2464d1F). Your rewards will not show in your wallet address but they are assigned to your wallet address to be vested in 12 months from their claim date. You will now be able to mint from those escrowed SNX as they are also used as your collateral. So mint away if you can and compound your next weeks SNX rewards.",
+      "value": "Switcheo Network is the first decentralized cryptocurrency exchange on the NEO blockchain which now allows trading of EOS, Ethereum and NEO tokens.\n\nOur focus is on building an open and decentralized financial network with a world-class trading experience, where users are able to trade freely and securely with one another.",
       "inline": true
     },
     {
-      "title": "For more details visit our help page:",
-      "value": "[here](https://synthetix.community/docs/staking#i-claimed-my-snx-staking-rewards-but-i-dont-see-them-in-my-wallet)"
+      "title": "Visit swithceo exchange:",
+      "value": "[here](https://switcheo.exchange/?utm_source=support)"
     }
   ],
   "footer": {}
