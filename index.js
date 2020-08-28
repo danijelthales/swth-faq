@@ -865,12 +865,13 @@ setInterval(function () {
 
 
 function doCalculate(command, msg, gasPriceParam, fromDM) {
+    // deduct 7% for validator fee
     let bondedNumber = bondedSwth.trim().replace(/%/g, "");
     var diff = (new Date().getTime() - start.getTime()) / 1000;
     diff /= (60 * 60 * 24 * 7);
     var weeksDif = Math.abs(Math.round(diff));
     var quotientNow = quotient - (weeksDif * 0.0316 / 100)
-    let result = Math.round(((command * 100 * quotientNow / bondedNumber) + Number.EPSILON) * 100) / 100;
+    let result = Math.round(((0.93 * command * 100 * quotientNow / bondedNumber) + Number.EPSILON) * 100) / 100;
     let resRewInUsd = Math.round(((result * coingeckoUsd) + Number.EPSILON) * 100) / 100;
     const exampleEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
