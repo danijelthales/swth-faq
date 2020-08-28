@@ -18,5 +18,9 @@
   {
     "number": 2,
     "alias": "validators"
+  },
+  {
+    "number": 3,
+    "alias": "donate"
   }
 ]
