@@ -1,0 +1,14 @@
+{
+  "title": "Question 3:",
+  "description": "Can I donate to the bot master for his contribution to the community?",
+  "color": "0099ff",
+  "url": "https://github.com/dgornjakovic",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "You most definitely can. This is the NEO APojnqz6EkzgW85zZZYH26RZExmSeVF2PL address you can use."
+    }
+  ],
+  "image": "donate.png",
+  "footer": {}
+}
