@@ -65,7 +65,7 @@ client.on("ready", () => {
 
 client.on("message", msg => {
 
-        if (msg.author.username != "FAQ") {
+        if (!msg.author.username.toUpperCase().includes("FAQ")) {
             if (!(msg.channel.type == "dm")) {
                 // this is logic for channels
                 if (msg.content.toLowerCase().trim() == "!faq") {
