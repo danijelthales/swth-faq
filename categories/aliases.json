@@ -2,5 +2,17 @@
   {
     "number": 1,
     "alias": "test"
+  },
+  {
+    "number": 7,
+    "alias": "gas"
+  },
+  {
+    "number": 8,
+    "alias": "eth"
+  },
+  {
+    "number": 9,
+    "alias": "swth"
   }
 ]
