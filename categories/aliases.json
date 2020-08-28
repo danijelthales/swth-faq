@@ -1,7 +1,7 @@
 [
   {
     "number": 1,
-    "alias": "test"
+    "alias": "switcheo"
   },
   {
     "number": 7,
@@ -14,5 +14,9 @@
   {
     "number": 9,
     "alias": "swth"
+  },
+  {
+    "number": 2,
+    "alias": "validators"
   }
 ]

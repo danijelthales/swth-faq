@@ -23,6 +23,13 @@ var quotient = 0.0192;
 var start = new Date('2020-08-21 05:00');
 
 var bondedSwth = '50%';
+var totalSupply = '1,005,188,672 SWTH';
+var tradeHubSupply = '535,067,822 SWTH';
+var stakingAPR = '187.83%';
+var marketCap = '$55,130,578';
+var activeValidators = 11;
+
+var validators = [];
 
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
@@ -602,6 +609,24 @@ client.on("message", msg => {
                         console.log("Error: " + err.message);
                     });
 
+                } else if (command == "2") {
+
+                    validators.forEach(v => {
+                        let fee = v.commission.commission_rates.rate * 100;
+                        fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
+                        let site = "https://switcheo.org/validator/" + v.operator_address;
+                        let tokens = v.tokens / 100000000;
+                        tokens = Math.round(tokens);
+                        tokens = getNumberLabel(Math.round(tokens));
+                        var response = "[Profile](" + site + ") \nFee: **" + fee + "**%" + " \nPool size: **" + tokens + " swth**";
+                        exampleEmbed.addField(v.description.moniker, response);
+                    });
+                    if (doReply) {
+                        msg.reply(exampleEmbed);
+                    } else {
+                        msg.channel.send(exampleEmbed);
+                    }
+
                 } else if (command == "9") {
 
                     exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
@@ -677,6 +702,25 @@ client.on("message", msg => {
 
     }
 )
+
+function getNumberLabel(labelValue) {
+
+    // Nine Zeroes for Billions
+    return Math.abs(Number(labelValue)) >= 1.0e+9
+
+        ? Math.round(Math.abs(Number(labelValue)) / 1.0e+9) + "B"
+        // Six Zeroes for Millions
+        : Math.abs(Number(labelValue)) >= 1.0e+6
+
+            ? Math.round(Math.abs(Number(labelValue)) / 1.0e+6) + "M"
+            // Three Zeroes for Thousands
+            : Math.abs(Number(labelValue)) >= 1.0e+3
+
+                ? Math.round(Math.abs(Number(labelValue)) / 1.0e+3) + "K"
+
+                : Math.abs(Number(labelValue));
+
+}
 
 setInterval(function () {
     https.get('https://api.coingecko.com/api/v3/coins/ethereum', (resp) => {
@@ -821,8 +865,13 @@ async function getStakingInfo() {
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://switcheo.org/", {waitUntil: 'networkidle2'});
 
+        await delay(4000);
+
+        await page.screenshot({path: 'screenshot.png'});
+
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
+
             var div = document.querySelectorAll('div.c513');
 
             var prices = []
@@ -830,15 +879,53 @@ async function getStakingInfo() {
                 prices.push(element.textContent);
             });
 
+            div = document.querySelectorAll('div.c516');
+
+            div.forEach(element => {
+                prices.push(element.textContent);
+            });
+
             return prices
         })
 
+        stakingAPR = prices[1];
         bondedSwth = prices[2];
+        activeValidators = prices[3];
+        marketCap = prices[5];
+        totalSupply = prices[6];
+        tradeHubSupply = prices[7];
+        totalSupply = replaceString(totalSupply, "SWTH", " SWTH");
+        tradeHubSupply = replaceString(tradeHubSupply, "SWTH", " SWTH");
         browser.close()
     } catch (e) {
-        console.log("Error happened on getting data from SNX tools.");
+        console.log("Error happened on getting data from https://switcheo.org/.");
         console.log(e);
     }
+}
+
+function delay(time) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time)
+    });
+}
+
+function getValidators() {
+    https.get('https://tradescan.switcheo.org/staking/validators', (resp) => {
+        let data = '';
+
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+            validators = JSON.parse(data).result;
+        });
+
+    }).on("error", (err) => {
+        console.log("Error getting validators: " + err.message);
+    });
 }
 
 setInterval(function () {
@@ -877,7 +964,19 @@ function doCalculate(command, msg, gasPriceParam, fromDM) {
         .setColor('#0099ff')
         .setTitle('Calculated rewards:');
     exampleEmbed.addField("SWTH weekly rewards", "You are expected to receive **" + result + "** SWTH for this week for **" + command + "** staked SWTH"
-        + "\n The estimated value of SWTH rewards is: **" + resRewInUsd + "$**");
+        + "\n The estimated value of SWTH rewards is: **$" + resRewInUsd + "**");
+    exampleEmbed.addField("Calculation info",
+        "Planned weekly inflation: **" + (Math.round(((quotientNow * 100) + Number.EPSILON) * 100) / 100) + "%**\n"
+        + "Staked swth percentage: **" + bondedSwth + "**\n"
+        + "Actual weekly staking rate **" + (Math.round(((quotientNow * 100 * 100 / bondedNumber) + Number.EPSILON) * 100) / 100) + "%**\n"
+        + "Swth price: **$" + coingeckoUsd + "**\n"
+        + "Averaged validator fee: **" + 7 + "%**");
+    exampleEmbed.addField("General info",
+        "Total supply: **" + totalSupply + "**\n"
+        + "Tradehub supply: **" + tradeHubSupply + "**\n"
+        + "Staking APR: **" + stakingAPR + "**\n"
+        + "Market cap: **" + marketCap + "**\n"
+        + "Active validators: **" + activeValidators + "**");
     msg.reply(exampleEmbed);
 }
 
@@ -886,7 +985,7 @@ function doShowChart(type, msg, fromDM) {
         const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle(type + ' SWTH price chart');
-        exampleEmbed.addField("Possible options:", "24H, 7D, 1M, 3M, 6M, YTD, 1Y, ALL");
+        exampleEmbed.addField("Possible options:", "realtime, 24H, 7D, 1M, 3M, 6M, YTD, 1Y, ALL");
         exampleEmbed.attachFiles(['charts/chart' + type.toLowerCase() + '.png'])
             .setImage('attachment://' + 'chart' + type.toLowerCase() + '.png');
         msg.reply(exampleEmbed);
@@ -931,9 +1030,13 @@ async function getChart(type) {
     }
 }
 
+
+setTimeout(function () {
+    getChart('realtime');
+}, 1 * 1000);
 setTimeout(function () {
     getChart('24H');
-}, 1 * 1000);
+}, 5 * 1000);
 setTimeout(function () {
     getChart('7D');
 }, 10 * 1000);
@@ -957,6 +1060,9 @@ setTimeout(function () {
 }, 70 * 1000);
 
 
+setInterval(function () {
+    getChart('realtime');
+}, 60 * 3 * 1000);
 setInterval(function () {
     getChart('24H');
 }, 60 * 7 * 1000);
@@ -983,6 +1089,8 @@ setInterval(function () {
 }, 60 * 100 * 1000);
 
 setTimeout(getStakingInfo, 10 * 1000);
-setInterval(getStakingInfo, 60 * 10 * 1000);
+setInterval(getStakingInfo, 60 * 1000);
+
+setInterval(getValidators, 20 * 1000);
 
 client.login(process.env.BOT_TOKEN);
