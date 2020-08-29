@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="729c55a7-323a-4374-b3a1-9d1c0f0ba680" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/answers/3.json" beforeDir="false" afterPath="$PROJECT_DIR$/answers/3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/aliases.json" beforeDir="false" afterPath="$PROJECT_DIR$/categories/aliases.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart24h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart3m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart3m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart6m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart6m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart7d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartrealtime.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartrealtime.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartytd.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartytd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,81 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="717" lean-forward="true" selection-start-line="717" selection-end-line="717" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="707" column="4" selection-start-line="707" selection-start-column="4" selection-end-line="707" selection-end-column="4" />
+            <state relative-caret-position="183">
+              <caret line="1087" column="20" lean-forward="true" selection-start-line="1087" selection-start-column="20" selection-end-line="1087" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/categories/aliases.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/screenshot.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/answers/7.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/answers/2.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/3.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/answers/3.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/answers/1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -118,6 +61,7 @@
       <find>bondedSwth</find>
       <find>validators</find>
       <find>getNumberLabel</find>
+      <find>getStakingInfo</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/dgornjakovic/swth-faq</replace>
@@ -141,8 +85,8 @@
         <option value="$PROJECT_DIR$/answers/2.json" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/questions/3.txt" />
-        <option value="$PROJECT_DIR$/answers/3.json" />
         <option value="$PROJECT_DIR$/categories/aliases.json" />
+        <option value="$PROJECT_DIR$/answers/3.json" />
       </list>
     </option>
   </component>
@@ -178,11 +122,6 @@
               <item name="swth-faq" type="b2602c69:ProjectViewProjectNode" />
               <item name="swth-faq" type="462c0819:PsiDirectoryNode" />
               <item name="charts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swth-faq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swth-faq" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swth-faq" type="b2602c69:ProjectViewProjectNode" />
@@ -239,12 +178,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598564643992</updated>
-      <workItem from="1598564645671" duration="15280000" />
+      <workItem from="1598564645671" duration="16200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15280000" />
+    <option name="totallyTimeSpent" value="16200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -255,7 +194,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -266,7 +205,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -388,13 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="717" lean-forward="true" selection-start-line="717" selection-end-line="717" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/questions/2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -423,17 +355,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/answers/3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/categories/aliases.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="1087" column="20" lean-forward="true" selection-start-line="1087" selection-start-column="20" selection-end-line="1087" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answers/3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
         </state>
       </provider>
     </entry>

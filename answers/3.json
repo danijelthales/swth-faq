@@ -1,12 +1,12 @@
 {
   "title": "Question 3:",
-  "description": "Can I donate to the bot master for his contribution to the community?",
+  "description": "Can I donate to the SWTH bot and community?",
   "color": "0099ff",
   "url": "https://github.com/dgornjakovic",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You most definitely can. This is the NEO address you can use: **APojnqz6EkzgW85zZZYH26RZExmSeVF2PL**"
+      "value": "You most definitely can. Here are some ways to do it:\n\nETH: **0x595197E895264AAC380635E563629c707D856356**\n\nNEO: **AXjajKB4BdgnyMoxcqwBLvnvV4zx8HhXwr**\n\nBTC: **3NfR2jYsWG7mDTiVHaVmdHa2KwavJJVpZx**\n\nSWITCHEO TRADEHUB ADDRESSES:\n\nNEO: **Ae9BVkLZjypmhnK5Ve46Z4R6TAc5SmMtpX**\nSWTH1: **swth1vxdnh987wa7l88qlamk899s85fun7n2zr0ppuk**"
     }
   ],
   "image": "donate.png",
