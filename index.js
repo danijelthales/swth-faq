@@ -611,7 +611,37 @@ client.on("message", msg => {
 
                 } else if (command == "2") {
 
+                    validators.sort(function (a, b) {
+                        return b.tokens - a.tokens;
+                    });
+                    var community = [];
+                    var companies = [];
                     validators.forEach(v => {
+                        if (v.description.moniker.toLowerCase().includes("neo economy") ||
+                            v.description.moniker.toLowerCase().includes("got") ||
+                            v.description.moniker.toLowerCase().includes("intsol")) {
+                            community.push(v);
+                        } else {
+                            companies.push(v);
+                        }
+                    });
+
+                    exampleEmbed.addField("Community validators:", "​\u200b");
+
+                    community.forEach(v => {
+                        let fee = v.commission.commission_rates.rate * 100;
+                        fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
+                        let site = "https://switcheo.org/validator/" + v.operator_address;
+                        let tokens = v.tokens / 100000000;
+                        tokens = Math.round(tokens);
+                        tokens = getNumberLabel(Math.round(tokens));
+                        var response = "[Profile](" + site + ") \nFee: **" + fee + "**%" + " \nPool size: **" + tokens + " swth**";
+                        exampleEmbed.addField(v.description.moniker, response);
+                    });
+
+                    exampleEmbed.addField("Companies:", "​\u200b");
+
+                    companies.forEach(v => {
                         let fee = v.commission.commission_rates.rate * 100;
                         fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
                         let site = "https://switcheo.org/validator/" + v.operator_address;

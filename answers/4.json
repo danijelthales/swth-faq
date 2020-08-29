@@ -1,0 +1,17 @@
+{
+  "title": "Question 4:",
+  "description": "When is the optimal time to claim?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "There is an algorithm explained on the image below."
+    },
+    {
+      "title": "TL;DR:",
+      "value": "As long as the amount you claim is greater than 2 swth to pay for claim and restake fees, you are fine."
+    }
+  ],
+  "image": "formula.PNG",
+  "footer": {}
+}
