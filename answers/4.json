@@ -9,7 +9,7 @@
     },
     {
       "title": "TL;DR:",
-      "value": "As long as the amount you claim is greater than 2 swth to pay for claim and restake fees, you are fine."
+      "value": "You are fine if you claim once or twice per day. Just make sure that the claim amount is greated than the fees, which are **1 swth** per validator per claim or stake."
     }
   ],
   "image": "formula.PNG",

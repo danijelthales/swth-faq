@@ -22,5 +22,9 @@
   {
     "number": 3,
     "alias": "donate"
+  },
+  {
+    "number": 4,
+    "alias": "claim"
   }
 ]

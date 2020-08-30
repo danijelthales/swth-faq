@@ -626,6 +626,7 @@ client.on("message", msg => {
                         }
                     });
 
+                    exampleEmbed.addField("​\u200b", "​\u200b");
                     exampleEmbed.addField("Community validators:", "​\u200b");
 
                     community.forEach(v => {
@@ -639,6 +640,7 @@ client.on("message", msg => {
                         exampleEmbed.addField(v.description.moniker, response);
                     });
 
+                    exampleEmbed.addField("​\u200b", "​\u200b");
                     exampleEmbed.addField("Companies:", "​\u200b");
 
                     companies.forEach(v => {
