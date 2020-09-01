@@ -348,7 +348,9 @@ client.on("message", msg => {
             exampleEmbed.addField("subscribe gas gasPrice",
                 "I will inform you the next time safe gas price is below your target gasPrice, e.g. **subscribe gas 30** will inform you if safe gas price is below 30 gwei");
             exampleEmbed.addField("calculate rewards swthStaked",
-                "Calculate SWTH rewards per staked snx amount. E.g. *calculate rewards 1000*.");
+                "Calculate SWTH rewards per staked SWTH amount. E.g. *calculate rewards 1000*.");
+            exampleEmbed.addField("show chart [period]",
+                "Shows the SWTH price chart for the given period, e.g. **show chart 24H**");
             exampleEmbed.addField("\u200b", "*Or just ask me a question and I will do my best to find a match for you, e.g. **What is the current gas price?***");
 
             msg.reply(exampleEmbed);

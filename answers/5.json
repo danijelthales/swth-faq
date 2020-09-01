@@ -1,0 +1,12 @@
+{
+  "title": "Question 5:",
+  "description": "What is staking?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Staking is the process of locking SWTH to support the security and operations of the TradeHub network. You can Stake/Delegate your SWTH tokens on 1 or more Validators.\n\n\nValidators run a full node and participate in consensus by broadcasting votes and committing new blocks to the chain."
+    }
+  ],
+  "footer": {}
+}

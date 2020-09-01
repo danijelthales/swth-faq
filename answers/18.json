@@ -1,0 +1,12 @@
+{
+  "title": "Question 18:",
+  "description": "What is the difference between Demex or Tradehub staking?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Tokens are staked on TradeHub which is a blockchain network which matches and execute trades. Demex is the first frontend web application to use the TradeHub platform."
+    }
+  ],
+  "footer": {}
+}

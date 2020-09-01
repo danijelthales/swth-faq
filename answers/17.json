@@ -1,0 +1,12 @@
+{
+  "title": "Question 17:",
+  "description": "Does staking SWTH generate rewards from liquidity pools or insurance products?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "No, these are separate programs. We will release details on these in due course."
+    }
+  ],
+  "footer": {}
+}

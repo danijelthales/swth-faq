@@ -1,0 +1,12 @@
+{
+  "title": "Question 15:",
+  "description": "What happens if a validator commits a penalty?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Staked tokens will be slashed by:\n\n5% when a validator double signs a block.\n0.1% when a validator misses signing more than 10% of its blocks in a 36000 block sliding window (ie approx. 3600 blocks in 10hrs). \nIf a validator is slashed, the delegators funds are automatically unbonded to protect against further losses and the validator is “jailed” and must manually rejoin the network after a delay period."
+    }
+  ],
+  "footer": {}
+}

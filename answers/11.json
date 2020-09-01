@@ -1,0 +1,13 @@
+{
+  "title": "Question 11:",
+  "description": "How much are the rewards for staking?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "During the first 4 years of Switcheo TradeHub operation, the number of tokens issued as block rewards will start with an initial weekly emission rate of 1.92% in Week 1 and then decay by 1.65% week-on-week. Tokens will be issued at a constant rate in Year 5. After Year 5, no more new tokens will be issued.\n\n"
+    }
+  ],
+  "images": "staking.PNG",
+  "footer": {}
+}

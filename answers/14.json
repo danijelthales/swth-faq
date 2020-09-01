@@ -1,0 +1,12 @@
+{
+  "title": "Question 14:",
+  "description": "What are the risks of staking?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Validators have no control over your staked SWTH tokens and your SWTH tokens always remain in your possession/TradeHub wallet. \n\nHowever, your staked tokens can be slashed in the event your delegated validator commits a penalty."
+    }
+  ],
+  "footer": {}
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Question 6:",
+  "description": "What is Bonded/Unbonding?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Bonded refers to the state which your SWTH are staked and earning rewards.\n\nUnbonding refers to the state where your SWTH are unstaked but are not yet tradeable/transferable due to an earlier unstaking action. The unbonding period for SWTH is 30 days. During those 30 days you will not earn any rewards. \n\nThere is no unbonding period when you redelegate/restake your SWTH tokens to a different validator."
+    }
+  ],
+  "footer": {}
+}

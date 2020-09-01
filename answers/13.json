@@ -1,0 +1,12 @@
+{
+  "title": "Question 13:",
+  "description": "Is there a minimum staking period?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "During Phase 0, you will not be able to unstake or withdraw your tokens. Once Phase 1 starts (planned for September) you will be able to unstake your tokens after 24 hours. Note: there is a 30 day unbonding period for unstaking. During this time rewards are not accumulated."
+    }
+  ],
+  "footer": {}
+}
