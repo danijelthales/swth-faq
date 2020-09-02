@@ -26,5 +26,29 @@
   {
     "number": 4,
     "alias": "claim"
+  },
+  {
+    "number": 5,
+    "alias": "staking"
+  },
+  {
+    "number": 6,
+    "alias": "bonded"
+  },
+  {
+    "number": 12,
+    "alias": "minimum to stake"
+  },
+  {
+    "number": 14,
+    "alias": "risks"
+  },
+  {
+    "number": 15,
+    "alias": "penalties"
+  },
+  {
+    "number": 18,
+    "alias": "demex"
   }
 ]

@@ -1,23 +1,44 @@
 [
   {
-    "name": "SWTH",
-    "desc": "General question about SWTH token",
+    "name": "Switcheo",
+    "desc": "General question about Switcheo",
     "questions": [
-      1,
+      1
+    ]
+  },
+  {
+    "name": "Staking",
+    "desc": "General question swth staking",
+    "questions": [
       2,
-      3,
-      36,
-      37,
-      39,
-      42,
-      43,
-      52,
-      53,
-      66,
-      67,
-      68,
-      69,
-      77
+      4,
+      5,
+      6,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  {
+    "name": "Community",
+    "desc": "Questions about discord community",
+    "questions": [
+      3
+    ]
+  },
+  {
+    "name": "Utilities",
+    "desc": "Price feeds and such",
+    "questions": [
+      7,
+      8,
+      9
     ]
   }
 ]
