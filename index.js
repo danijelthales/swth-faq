@@ -85,7 +85,7 @@ client.on("message", msg => {
                     doQuestion(msg, "!faq question", false);
                 } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq calculate rewards")) {
                     let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
-                    const args = content.slice("faq calculate rewards".length).split(' ');
+                    const args = content.slice("!faq calculate rewards".length).split(' ');
                     args.shift();
                     const command = args.shift().trim();
                     if (command && !isNaN(command)) {

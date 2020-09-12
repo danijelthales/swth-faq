@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729c55a7-323a-4374-b3a1-9d1c0f0ba680" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/charts/chart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart24h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart3m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart3m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart6m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart6m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart7d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartall.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartall.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/charts/chartrealtime.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartrealtime.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartytd.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartytd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart14d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart14d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1y.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/charts/exchangechart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart24h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart30d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart30d.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshot.png" afterDir="false" />
     </list>
@@ -22,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="1023" column="99" selection-start-line="1023" selection-start-column="99" selection-end-line="1023" selection-end-column="99" />
+              <caret line="87" column="62" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -85,6 +97,7 @@
       <find>validators</find>
       <find>doShowChart</find>
       <find>avgFee</find>
+      <find>calculate rewa</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/dgornjakovic/swth-faq</replace>
@@ -236,12 +249,12 @@
       <workItem from="1599002423411" duration="2984000" />
       <workItem from="1599090141601" duration="1483000" />
       <workItem from="1599345310730" duration="1223000" />
-      <workItem from="1599864591863" duration="6860000" />
+      <workItem from="1599864591863" duration="7379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35074000" />
+    <option name="totallyTimeSpent" value="35593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -608,7 +621,7 @@
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="1023" column="99" selection-start-line="1023" selection-start-column="99" selection-end-line="1023" selection-end-column="99" />
+          <caret line="87" column="62" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
         </state>
       </provider>
     </entry>
