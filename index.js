@@ -1016,7 +1016,7 @@ function doCalculate(command, msg, feeParam, fromDM) {
     diff /= (60 * 60 * 24 * 7);
     var weeksDif = Math.abs(Math.round(diff));
     var quotientNow = quotient - (weeksDif * 0.0316 / 100)
-    let validatorFee = avgFee;
+    let validatorFee = 1 - avgFee / 100;
     if (feeParam) {
         validatorFee = 1 - feeParam.replace('%', '') / 100;
     }
@@ -1032,7 +1032,7 @@ function doCalculate(command, msg, feeParam, fromDM) {
         + "Staked swth percentage: **" + bondedSwth + "**\n"
         + "Actual weekly staking rate **" + (Math.round(((quotientNow * 100 * 100 / bondedNumber) + Number.EPSILON) * 100) / 100) + "%**\n"
         + "Swth price: **$" + coingeckoUsd + "**\n"
-        + "Averaged validator fee: **" + (100-validatorFee * 100) + "%**");
+        + "Averaged validator fee: **" + (100 - validatorFee * 100) + "%**");
     exampleEmbed.addField("General info",
         "Total supply: **" + totalSupply + "**\n"
         + "Tradehub supply: **" + tradeHubSupply + "**\n"
