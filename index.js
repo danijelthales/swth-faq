@@ -1020,6 +1020,8 @@ function doCalculate(command, msg, feeParam, fromDM) {
     if (feeParam) {
         validatorFee = 1 - feeParam.replace('%', '') / 100;
     }
+    let avgValidatorFeeToDisplay = (100 - validatorFee * 100);
+    avgValidatorFeeToDisplay = Math.round((avgValidatorFeeToDisplay + Number.EPSILON) * 100) / 100;
     let result = Math.round(((validatorFee * command * 100 * quotientNow / bondedNumber) + Number.EPSILON) * 100) / 100;
     let resRewInUsd = Math.round(((result * coingeckoUsd) + Number.EPSILON) * 100) / 100;
     const exampleEmbed = new Discord.MessageEmbed()
