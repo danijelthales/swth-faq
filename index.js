@@ -95,7 +95,7 @@ client.on("message", msg => {
                             argsSecondPart.shift();
                             fee = argsSecondPart.shift().trim();
                         }
-                        doCalculate(command, msg, gas, false);
+                        doCalculate(command, msg, fee, false);
                     }
                 } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq show chart")) {
                     let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
