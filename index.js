@@ -64,7 +64,7 @@ setInterval(function () {
             console.log(e);
         }
     });
-}, 10 * 1000);
+}, 20 * 1000);
 
 if (process.env.REDIS_URL) {
     redisClient = redis.createClient(process.env.REDIS_URL);
