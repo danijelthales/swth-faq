@@ -101,6 +101,12 @@ client.on("message", msg => {
                     args.shift();
                     const command = args.shift().trim();
                     doShowChart(command, msg, false);
+                } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq show exchange chart")) {
+                    let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
+                    const args = content.slice("!faq exchange show chart".length).split(' ');
+                    args.shift();
+                    const command = args.shift().trim();
+                    doShowChart(command, msg, false);
                 } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq ")) {
                     let found = checkAliasMatching(false);
                     if (!found) {
@@ -220,6 +226,12 @@ client.on("message", msg => {
                         } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("show chart")) {
                             let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
                             const args = content.slice("show chart".length).split(' ');
+                            args.shift();
+                            const command = args.shift().trim();
+                            doShowChart(command, msg, true);
+                        } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("show exchange chart")) {
+                            let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
+                            const args = content.slice("show exchange chart".length).split(' ');
                             args.shift();
                             const command = args.shift().trim();
                             doShowChart(command, msg, true);
@@ -351,6 +363,8 @@ client.on("message", msg => {
                 "Calculate SWTH rewards per staked SWTH amount. E.g. *calculate rewards 1000*.");
             exampleEmbed.addField("show chart [period]",
                 "Shows the SWTH price chart for the given period, e.g. **show chart 24H**");
+            exampleEmbed.addField("show exchange chart [period]",
+                "Shows the SWTH price chart for the given period, e.g. **show chart 24h**");
             exampleEmbed.addField("\u200b", "*Or just ask me a question and I will do my best to find a match for you, e.g. **What is the current gas price?***");
 
             msg.reply(exampleEmbed);
@@ -1029,6 +1043,21 @@ function doShowChart(type, msg, fromDM) {
     }
 }
 
+function doShowExchangeChart(type, msg, fromDM) {
+    try {
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(type + ' SWTH exchange volume chart');
+        exampleEmbed.addField("Possible options:", "24h, 7d, 14d, 30d, 3m, 1y");
+        exampleEmbed.attachFiles(['charts/exchangechart' + type.toLowerCase() + '.png'])
+            .setImage('attachment://' + 'exchangechart' + type.toLowerCase() + '.png');
+        msg.reply(exampleEmbed);
+    } catch (e) {
+        console.log("Exception happened when showing the chart");
+        console.log(e);
+    }
+}
+
 async function getChart(type) {
     try {
         const browser = await puppeteer.launch({
@@ -1121,6 +1150,115 @@ setInterval(function () {
 setInterval(function () {
     getChart('ALL');
 }, 60 * 100 * 1000);
+
+
+async function getExchangeChart(type) {
+    try {
+        const browser = await puppeteer.launch({
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+            ],
+        });
+        const page = await browser.newPage();
+        await page.setViewport({width: 1000, height: 926});
+        await page.goto("https://www.coingecko.com/en/exchanges/switcheo#statistics", {waitUntil: 'networkidle2'});
+        await page.waitForSelector('#cookie-notice');
+        await page.click('#cookie-notice a.btn');
+        await page.waitForSelector('.highcharts-container');
+        await delay(2000);
+
+        if (type.includes('7d')) {
+            await page.click('.graph-stats-btn-7d');
+            await delay(5000);
+        }
+        if (type.includes('14d')) {
+            await page.click('.graph-stats-btn-7d');
+            await delay(5000);
+        }
+        if (type.includes('30d')) {
+            await page.click('.graph-stats-btn-7d');
+            await delay(5000);
+        }
+        if (type.includes('3m')) {
+            await page.click('.graph-stats-btn-7d');
+            await delay(5000);
+        }
+        if (type.includes('1y')) {
+            await page.click('.graph-stats-btn-7d');
+            await delay(5000);
+        }
+
+        const rect = await page.evaluate(() => {
+            const element = (document.querySelectorAll('.highcharts-container')[2]);
+            const {x, y, width, height} = element.getBoundingClientRect();
+            return {left: x, top: y + 700, width, height, id: element.id};
+        });
+
+        await page.screenshot({
+            path: 'charts/exchangechart' + type.toLowerCase() + '.png',
+            clip: {
+                x: rect.left - 0,
+                y: rect.top - 0,
+                width: rect.width + 0 * 2,
+                height: rect.height + 0 * 2
+            }
+        });
+        console.log("Saved exchange chart: " + type);
+        browser.close();
+    } catch (e) {
+        console.log("Error happened on getting chart.");
+        console.log(e);
+    }
+}
+
+setTimeout(function () {
+    getExchangeChart('24h');
+}, 5 * 1000);
+
+setInterval(function () {
+    getExchangeChart('24h');
+}, 1 * 1000 * 60);
+
+setTimeout(function () {
+    getExchangeChart('7d');
+}, 20 * 1000);
+
+setInterval(function () {
+    getExchangeChart('7d');
+}, 10 * 1000 * 60);
+
+setTimeout(function () {
+    getExchangeChart('14d');
+}, 30 * 1000);
+
+setInterval(function () {
+    getExchangeChart('14d');
+}, 12 * 1000 * 60);
+
+setTimeout(function () {
+    getExchangeChart('30d');
+}, 40 * 1000);
+
+setInterval(function () {
+    getExchangeChart('30d');
+}, 15 * 1000 * 60);
+
+setTimeout(function () {
+    getExchangeChart('1m');
+}, 50 * 1000);
+
+setInterval(function () {
+    getExchangeChart('1m');
+}, 20 * 1000 * 60);
+
+setTimeout(function () {
+    getExchangeChart('1y');
+}, 60 * 1000);
+
+setInterval(function () {
+    getExchangeChart('1y');
+}, 100 * 1000 * 60);
 
 setTimeout(getStakingInfo, 10 * 1000);
 setInterval(getStakingInfo, 60 * 1000);
