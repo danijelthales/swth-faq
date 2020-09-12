@@ -1034,7 +1034,7 @@ function doCalculate(command, msg, feeParam, fromDM) {
         + "Staked swth percentage: **" + bondedSwth + "**\n"
         + "Actual weekly staking rate **" + (Math.round(((quotientNow * 100 * 100 / bondedNumber) + Number.EPSILON) * 100) / 100) + "%**\n"
         + "Swth price: **$" + coingeckoUsd + "**\n"
-        + "Averaged validator fee: **" + (100 - validatorFee * 100) + "%**");
+        + "Averaged validator fee: **" + avgValidatorFeeToDisplay + "%**");
     exampleEmbed.addField("General info",
         "Total supply: **" + totalSupply + "**\n"
         + "Tradehub supply: **" + tradeHubSupply + "**\n"
