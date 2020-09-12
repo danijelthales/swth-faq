@@ -29,6 +29,8 @@ var stakingAPR = '187.83%';
 var marketCap = '$55,130,578';
 var activeValidators = 11;
 
+var avgFee = '5';
+
 var validators = [];
 
 let gasSubscribersMap = new Map();
@@ -87,11 +89,11 @@ client.on("message", msg => {
                     args.shift();
                     const command = args.shift().trim();
                     if (command && !isNaN(command)) {
-                        var gas = false;
+                        var fee = false;
                         if (content.includes("with")) {
                             var argsSecondPart = content.slice(content.indexOf("with") + "with".length).split(' ');
                             argsSecondPart.shift();
-                            gas = argsSecondPart.shift().trim();
+                            fee = argsSecondPart.shift().trim();
                         }
                         doCalculate(command, msg, gas, false);
                     }
@@ -215,13 +217,13 @@ client.on("message", msg => {
                             args.shift();
                             const command = args.shift().trim();
                             if (command && !isNaN(command)) {
-                                var gas = false;
+                                var fee = false;
                                 if (content.includes("with")) {
                                     var argsSecondPart = content.slice(content.indexOf("with") + "with".length).split(' ');
                                     argsSecondPart.shift();
-                                    gas = argsSecondPart.shift().trim();
+                                    fee = argsSecondPart.shift().trim();
                                 }
-                                doCalculate(command, msg, gas, true);
+                                doCalculate(command, msg, fee, true);
                             }
                         } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("show chart")) {
                             let content = msg.content.toLowerCase().trim().replace(/ +(?= )/g, '');
@@ -969,6 +971,14 @@ function getValidators() {
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
             validators = JSON.parse(data).result;
+            var totalFee = 0;
+            validators.forEach(v => {
+                let fee = v.commission.commission_rates.rate * 100;
+                fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
+                totalFee += fee;
+            })
+            avgFee = totalFee / validators.length;
+            avgFee = Math.round(((avgFee) + Number.EPSILON) * 100) / 100;
         });
 
     }).on("error", (err) => {
@@ -999,14 +1009,18 @@ setInterval(function () {
 }, 10 * 1000);
 
 
-function doCalculate(command, msg, gasPriceParam, fromDM) {
+function doCalculate(command, msg, feeParam, fromDM) {
     // deduct 7% for validator fee
     let bondedNumber = bondedSwth.trim().replace(/%/g, "");
     var diff = (new Date().getTime() - start.getTime()) / 1000;
     diff /= (60 * 60 * 24 * 7);
     var weeksDif = Math.abs(Math.round(diff));
     var quotientNow = quotient - (weeksDif * 0.0316 / 100)
-    let result = Math.round(((0.93 * command * 100 * quotientNow / bondedNumber) + Number.EPSILON) * 100) / 100;
+    let validatorFee = avgFee;
+    if (feeParam) {
+        validatorFee = 1 - feeParam.replace('%', '') / 100;
+    }
+    let result = Math.round(((validatorFee * command * 100 * quotientNow / bondedNumber) + Number.EPSILON) * 100) / 100;
     let resRewInUsd = Math.round(((result * coingeckoUsd) + Number.EPSILON) * 100) / 100;
     const exampleEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
@@ -1018,7 +1032,7 @@ function doCalculate(command, msg, gasPriceParam, fromDM) {
         + "Staked swth percentage: **" + bondedSwth + "**\n"
         + "Actual weekly staking rate **" + (Math.round(((quotientNow * 100 * 100 / bondedNumber) + Number.EPSILON) * 100) / 100) + "%**\n"
         + "Swth price: **$" + coingeckoUsd + "**\n"
-        + "Averaged validator fee: **" + 7 + "%**");
+        + "Averaged validator fee: **" + (100-validatorFee * 100) + "%**");
     exampleEmbed.addField("General info",
         "Total supply: **" + totalSupply + "**\n"
         + "Tradehub supply: **" + tradeHubSupply + "**\n"
