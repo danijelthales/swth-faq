@@ -43,7 +43,7 @@ clientValidators.login(process.env.BOT_TOKEN_VALIDATORS);
 let varCount = 1;
 
 setInterval(function () {
-    clientFaqPrice.guilds.cache.forEach(function (value, key) {
+    clientValidators.guilds.cache.forEach(function (value, key) {
         try {
             let v = validators[varCount];
             varCount = (varCount + 1) % validators.length;
