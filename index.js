@@ -38,6 +38,28 @@ let gasSubscribersLastPushMap = new Map();
 
 console.log("Redis URL:" + process.env.REDIS_URL);
 
+const clientValidators = new Discord.Client();
+clientValidators.login(process.env.BOT_TOKEN_VALIDATORS);
+let varCount = 1;
+
+setInterval(function () {
+    clientFaqPrice.guilds.cache.forEach(function (value, key) {
+        try {
+            let v = validators[varCount];
+            varCount = (varCount + 1) % validators.length;
+            let fee = v.commission.commission_rates.rate * 100;
+            fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
+            let tokens = v.tokens / 100000000;
+            tokens = Math.round(tokens);
+            tokens = getNumberLabel(Math.round(tokens));
+            value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
+            value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "**%") + " Pool size=" + tokens + " swth**", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+}, 10 * 1000);
+
 if (process.env.REDIS_URL) {
     redisClient = redis.createClient(process.env.REDIS_URL);
     redisClient.on("error", function (error) {
