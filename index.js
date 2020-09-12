@@ -108,7 +108,7 @@ client.on("message", msg => {
                     const args = content.slice("!faq exchange show chart".length).split(' ');
                     args.shift();
                     const command = args.shift().trim();
-                    doShowChart(command, msg, false);
+                    doShowExchangeChart(command, msg, false);
                 } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq ")) {
                     let found = checkAliasMatching(false);
                     if (!found) {
@@ -236,7 +236,7 @@ client.on("message", msg => {
                             const args = content.slice("show exchange chart".length).split(' ');
                             args.shift();
                             const command = args.shift().trim();
-                            doShowChart(command, msg, true);
+                            doShowExchangeChart(command, msg, true);
                         } else {
                             if (!msg.author.username.toLowerCase().includes("faq")) {
                                 if (msg.content.endsWith("?")) {
@@ -1189,19 +1189,19 @@ async function getExchangeChart(type) {
             await delay(5000);
         }
         if (type.includes('14d')) {
-            await page.click('.graph-stats-btn-7d');
+            await page.click('.graph-stats-btn-14d');
             await delay(5000);
         }
         if (type.includes('30d')) {
-            await page.click('.graph-stats-btn-7d');
+            await page.click('.graph-stats-btn-30d');
             await delay(5000);
         }
         if (type.includes('3m')) {
-            await page.click('.graph-stats-btn-7d');
+            await page.click('.graph-stats-btn-3m');
             await delay(5000);
         }
         if (type.includes('1y')) {
-            await page.click('.graph-stats-btn-7d');
+            await page.click('.graph-stats-btn-1y');
             await delay(5000);
         }
 
