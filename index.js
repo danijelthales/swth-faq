@@ -45,15 +45,21 @@ let varCount = 1;
 setInterval(function () {
     clientValidators.guilds.cache.forEach(function (value, key) {
         try {
-            let v = validators[varCount];
-            varCount = (varCount + 1) % validators.length;
-            let fee = v.commission.commission_rates.rate * 100;
-            fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
-            let tokens = v.tokens / 100000000;
-            tokens = Math.round(tokens);
-            tokens = getNumberLabel(Math.round(tokens));
-            value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
-            value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "**%") + " Pool size=" + tokens + " swth**", {type: 'PLAYING'});
+            if (validators.length > 1) {
+                let v = validators[varCount];
+                varCount = (varCount + 1) % validators.length;
+                let fee = v.commission.commission_rates.rate * 100;
+                fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
+                let tokens = v.tokens / 100000000;
+                tokens = Math.round(tokens);
+                tokens = getNumberLabel(Math.round(tokens));
+                var nickname = v.description.moniker;
+                if (nickname.length > 32) {
+                    nickname = nickname.substring(0, 31);
+                }
+                value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
+                value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "%") + " Pool size=" + tokens + " swth", {type: 'PLAYING'});
+            }
         } catch (e) {
             console.log(e);
         }
