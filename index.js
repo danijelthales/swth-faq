@@ -57,14 +57,14 @@ setInterval(function () {
                 if (nickname.length > 32) {
                     nickname = nickname.substring(0, 31);
                 }
-                value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
                 value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "%") + " Pool size=" + tokens + " swth", {type: 'PLAYING'});
+                value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
             }
         } catch (e) {
             console.log(e);
         }
     });
-}, 20 * 1000);
+}, 30 * 1000);
 
 if (process.env.REDIS_URL) {
     redisClient = redis.createClient(process.env.REDIS_URL);
