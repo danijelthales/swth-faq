@@ -32,6 +32,7 @@ var activeValidators = 11;
 var avgFee = '5';
 
 var validators = [];
+var validatorsDelegators = new Map();
 
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
@@ -57,9 +58,12 @@ setInterval(function () {
                 if (nickname.length > 32) {
                     nickname = nickname.substring(0, 31);
                 }
-                value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "%") + " Pool size=" + tokens + " swth", {type: 'PLAYING'});
+                let delegators = validatorsDelegators.get(v.operator_address);
+                value.members.cache.get("754445205343830016").user.setActivity("fee=" + (fee + "%") + " Pool=" + tokens + " Delegators:" +
+                    delegators, {type: 'PLAYING'});
                 value.members.cache.get("754445205343830016").setNickname(v.description.moniker);
             }
+
         } catch (e) {
             console.log(e);
         }
@@ -1004,9 +1008,30 @@ function getValidators() {
                 let fee = v.commission.commission_rates.rate * 100;
                 fee = Math.round(((fee) + Number.EPSILON) * 100) / 100;
                 totalFee += fee;
+                getDelegators(v.operator_address);
             })
             avgFee = totalFee / validators.length;
             avgFee = Math.round(((avgFee) + Number.EPSILON) * 100) / 100;
+        });
+
+    }).on("error", (err) => {
+        console.log("Error getting validators: " + err.message);
+    });
+}
+
+function getDelegators(name) {
+    https.get('https://tradescan.switcheo.org/staking/validators/' + name + '/delegations', (resp) => {
+        let data = '';
+
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+            var delegators = JSON.parse(data).result;
+            validatorsDelegators.set(name, delegators.length)
         });
 
     }).on("error", (err) => {

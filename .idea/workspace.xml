@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729c55a7-323a-4374-b3a1-9d1c0f0ba680" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper12psgxpqvjruu3xuwkwr9g6zfaqw4zagtfl4v8c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1fdqkq5gc5x8h6a0j9hamc30stlvea6zlsh4y7s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1hexzxh3apqpqzzchhgynks2xr8ar8qvd58d2u7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1myzsjsnrsnsy46qucfr766asxfrtfdlqflcpq3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1p8m7jmfj7m2ytqk6r32xlfxyac0078q8kkfgwe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1q3pkx05dq80kpyzsjfs5afc35pp2xwcnuvktn6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1qvhdvnrxh84f2teng58qugx77unm8v5tm47cp3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1yyepjpjsrve6vy6l77nk88dtts8la9r3thj7kj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/swthvaloper1z2jz4uhz8zgt4lq9mq5slz3ukyp3grhlr9xv3k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart24h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart3m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart3m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart6m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart6m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart7d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartall.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartrealtime.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartrealtime.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/chartytd.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartytd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart14d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart14d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart24h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart30d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart30d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/exchangechart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart7d.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
+            <state relative-caret-position="238">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -37,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="80" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
+              <caret line="1" column="80" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -46,10 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>quotient</find>
-      <find>Starting gas subscriptions</find>
-      <find>saved</find>
-      <find>bondedNumber</find>
       <find>coingeckoUsd</find>
       <find>ytd</find>
       <find>bondedsw</find>
@@ -73,9 +95,13 @@
       <find>avgFee</find>
       <find>calculate rewa</find>
       <find>playing</find>
-      <find>validators</find>
       <find>clientFaqPrice</find>
       <find>20</find>
+      <find>dela</find>
+      <find>clientValidators</find>
+      <find>validators</find>
+      <find>getDelegators</find>
+      <find>images</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/dgornjakovic/swth-faq</replace>
@@ -145,8 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +198,11 @@
             <path>
               <item name="swth-faq" type="b2602c69:ProjectViewProjectNode" />
               <item name="swth-faq" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="swth-faq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swth-faq" type="462c0819:PsiDirectoryNode" />
               <item name="questions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -184,15 +215,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\snx\swth-faq\images" />
       <recent name="C:\snx\swth-faq\questions" />
       <recent name="C:\snx\swth-faq\answers" />
-      <recent name="C:\snx\swth-faq\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,18 +259,19 @@
       <workItem from="1599002423411" duration="2984000" />
       <workItem from="1599090141601" duration="1483000" />
       <workItem from="1599345310730" duration="1223000" />
-      <workItem from="1599864591863" duration="11966000" />
+      <workItem from="1599864591863" duration="12566000" />
+      <workItem from="1600123305546" duration="4720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40180000" />
+    <option name="totallyTimeSpent" value="45500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -590,7 +622,7 @@
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="80" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
+          <caret line="1" column="80" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -603,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
+        <state relative-caret-position="238">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
