@@ -1064,11 +1064,17 @@ setInterval(function () {
 
 function doCalculate(command, msg, feeParam, fromDM) {
     // deduct 7% for validator fee
+
     let bondedNumber = bondedSwth.trim().replace(/%/g, "");
     var diff = (new Date().getTime() - start.getTime()) / 1000;
     diff /= (60 * 60 * 24 * 7);
     var weeksDif = Math.abs(Math.round(diff));
-    var quotientNow = quotient - (weeksDif * 0.0316 / 100)
+    let originalSupply = 1000000000;
+    let currentWeekSupply = originalSupply;
+    for (var i = 0; i <= weeksDif; i++) {
+        currentWeekSupply = currentWeekSupply + currentWeekSupply * (quotient - (i * 0.0316 / 100));
+    }
+    var quotientNow = (quotient - (weeksDif * 0.0316 / 100)) * (originalSupply / currentWeekSupply);
     let validatorFee = 1 - avgFee / 100;
     if (feeParam) {
         validatorFee = 1 - feeParam.replace('%', '') / 100;

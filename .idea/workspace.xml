@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729c55a7-323a-4374-b3a1-9d1c0f0ba680" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper12psgxpqvjruu3xuwkwr9g6zfaqw4zagtfl4v8c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1fdqkq5gc5x8h6a0j9hamc30stlvea6zlsh4y7s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1hexzxh3apqpqzzchhgynks2xr8ar8qvd58d2u7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1myzsjsnrsnsy46qucfr766asxfrtfdlqflcpq3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1p8m7jmfj7m2ytqk6r32xlfxyac0078q8kkfgwe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1q3pkx05dq80kpyzsjfs5afc35pp2xwcnuvktn6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1qvhdvnrxh84f2teng58qugx77unm8v5tm47cp3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1yyepjpjsrve6vy6l77nk88dtts8la9r3thj7kj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swthvaloper1z2jz4uhz8zgt4lq9mq5slz3ukyp3grhlr9xv3k.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/charts/chart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1m.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/charts/chart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1y.png" afterDir="false" />
@@ -44,8 +35,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="157">
+              <caret line="1077" column="40" lean-forward="true" selection-start-line="1077" selection-start-column="40" selection-end-line="1077" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/answers/7.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/answers/8.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -161,8 +170,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
     <option name="width" value="1932" />
     <option name="height" value="1045" />
   </component>
@@ -260,18 +269,20 @@
       <workItem from="1599090141601" duration="1483000" />
       <workItem from="1599345310730" duration="1223000" />
       <workItem from="1599864591863" duration="12566000" />
-      <workItem from="1600123305546" duration="4720000" />
+      <workItem from="1600123305546" duration="5953000" />
+      <workItem from="1600942116642" duration="782000" />
+      <workItem from="1600981406262" duration="1490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45500000" />
+    <option name="totallyTimeSpent" value="49005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26918977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -473,16 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/answers/7.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/answers/8.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/questions/9.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -619,10 +620,24 @@
     <entry file="file://$PROJECT_DIR$/charts/exchangechart7d.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="80" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
+        <state relative-caret-position="157">
+          <caret line="1077" column="40" lean-forward="true" selection-start-line="1077" selection-start-column="40" selection-end-line="1077" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answers/7.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answers/8.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -633,10 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="17">
+          <caret line="1" column="80" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="80" />
         </state>
       </provider>
     </entry>
