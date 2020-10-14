@@ -947,7 +947,7 @@ async function getStakingInfo() {
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://switcheo.org/", {waitUntil: 'networkidle2'});
 
-        await delay(4000);
+        await delay(10000);
 
         await page.screenshot({path: 'screenshot.png'});
 

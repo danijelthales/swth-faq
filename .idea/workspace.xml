@@ -3,23 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="729c55a7-323a-4374-b3a1-9d1c0f0ba680" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1m.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart1y.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart24h.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart3m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart3m.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart6m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart6m.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chart7d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chartall.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chartrealtime.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartrealtime.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/chartytd.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/chartytd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart14d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart14d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart1m.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1m.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart1y.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart1y.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart24h.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart30d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart30d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/exchangechart7d.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/exchangechart7d.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="1077" column="40" lean-forward="true" selection-start-line="1077" selection-start-column="40" selection-end-line="1077" selection-end-column="40" />
+            <state relative-caret-position="416">
+              <caret line="1326" column="27" lean-forward="true" selection-start-line="1326" selection-start-column="27" selection-end-line="1326" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -81,14 +65,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coingeckoUsd</find>
       <find>ytd</find>
       <find>bondedsw</find>
       <find>totalSupply</find>
       <find>replaceString</find>
       <find>bondedSwth</find>
       <find>getNumberLabel</find>
-      <find>getStakingInfo</find>
       <find>show chart</find>
       <find>synth</find>
       <find>wait</find>
@@ -111,6 +93,8 @@
       <find>validators</find>
       <find>getDelegators</find>
       <find>images</find>
+      <find>stakingAPR</find>
+      <find>getStakingInfo</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/dgornjakovic/swth-faq</replace>
@@ -181,7 +165,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,13 +201,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -271,28 +255,30 @@
       <workItem from="1599864591863" duration="12566000" />
       <workItem from="1600123305546" duration="5953000" />
       <workItem from="1600942116642" duration="782000" />
-      <workItem from="1600981406262" duration="1490000" />
+      <workItem from="1600981406262" duration="2108000" />
+      <workItem from="1602674027566" duration="327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49005000" />
+    <option name="totallyTimeSpent" value="49950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26918977" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.271855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="GraphQL" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29252437" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29252437" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -622,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="1077" column="40" lean-forward="true" selection-start-line="1077" selection-start-column="40" selection-end-line="1077" selection-end-column="40" />
+        <state relative-caret-position="416">
+          <caret line="1326" column="27" lean-forward="true" selection-start-line="1326" selection-start-column="27" selection-end-line="1326" selection-end-column="27" />
         </state>
       </provider>
     </entry>
