@@ -954,14 +954,14 @@ async function getStakingInfo() {
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
 
-            var div = document.querySelectorAll('p.jss173');
+            var div = document.querySelectorAll('p.jss189');
 
             var prices = []
             div.forEach(element => {
                 prices.push(element.textContent);
             });
 
-            div = document.querySelectorAll('div.jss179');
+            div = document.querySelectorAll('div.jss205 ');
 
             div.forEach(element => {
                 prices.push(element.textContent);
@@ -973,9 +973,9 @@ async function getStakingInfo() {
         stakingAPR = prices[1];
         bondedSwth = prices[2];
         activeValidators = prices[3];
-        marketCap = prices[9];
-        totalSupply = prices[10];
-        tradeHubSupply = prices[11];
+        marketCap = prices[5];
+        totalSupply = prices[6];
+        tradeHubSupply = prices[7];
         totalSupply = replaceString(totalSupply, "SWTH", " SWTH");
         tradeHubSupply = replaceString(tradeHubSupply, "SWTH", " SWTH");
         browser.close()
