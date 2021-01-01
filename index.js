@@ -954,14 +954,14 @@ async function getStakingInfo() {
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
 
-            var div = document.querySelectorAll('p.jss189');
+            var div = document.querySelectorAll('p.jss207');
 
             var prices = []
             div.forEach(element => {
                 prices.push(element.textContent);
             });
 
-            div = document.querySelectorAll('div.jss205 ');
+            div = document.querySelectorAll('div.jss228');
 
             div.forEach(element => {
                 prices.push(element.textContent);
