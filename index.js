@@ -1286,53 +1286,53 @@ async function getExchangeChart(type) {
     }
 }
 
-setTimeout(function () {
-    getExchangeChart('24h');
-}, 5 * 1000);
-
-setInterval(function () {
-    getExchangeChart('24h');
-}, 1 * 1000 * 60);
-
-setTimeout(function () {
-    getExchangeChart('7d');
-}, 20 * 1000);
-
-setInterval(function () {
-    getExchangeChart('7d');
-}, 10 * 1000 * 60);
-
-setTimeout(function () {
-    getExchangeChart('14d');
-}, 30 * 1000);
-
-setInterval(function () {
-    getExchangeChart('14d');
-}, 12 * 1000 * 60);
-
-setTimeout(function () {
-    getExchangeChart('30d');
-}, 40 * 1000);
-
-setInterval(function () {
-    getExchangeChart('30d');
-}, 15 * 1000 * 60);
-
-setTimeout(function () {
-    getExchangeChart('1m');
-}, 50 * 1000);
-
-setInterval(function () {
-    getExchangeChart('1m');
-}, 20 * 1000 * 60);
-
-setTimeout(function () {
-    getExchangeChart('1y');
-}, 60 * 1000);
-
-setInterval(function () {
-    getExchangeChart('1y');
-}, 100 * 1000 * 60);
+// setTimeout(function () {
+//     getExchangeChart('24h');
+// }, 5 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('24h');
+// }, 1 * 1000 * 60);
+//
+// setTimeout(function () {
+//     getExchangeChart('7d');
+// }, 20 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('7d');
+// }, 10 * 1000 * 60);
+//
+// setTimeout(function () {
+//     getExchangeChart('14d');
+// }, 30 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('14d');
+// }, 12 * 1000 * 60);
+//
+// setTimeout(function () {
+//     getExchangeChart('30d');
+// }, 40 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('30d');
+// }, 15 * 1000 * 60);
+//
+// setTimeout(function () {
+//     getExchangeChart('1m');
+// }, 50 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('1m');
+// }, 20 * 1000 * 60);
+//
+// setTimeout(function () {
+//     getExchangeChart('1y');
+// }, 60 * 1000);
+//
+// setInterval(function () {
+//     getExchangeChart('1y');
+// }, 100 * 1000 * 60);
 
 setTimeout(getStakingInfo, 10 * 1000);
 setInterval(getStakingInfo, 60 * 1000);
