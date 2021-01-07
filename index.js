@@ -1239,8 +1239,6 @@ async function getExchangeChart(type) {
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://www.coingecko.com/en/exchanges/switcheo#statistics", {waitUntil: 'networkidle2'});
-        await page.waitForSelector('#cookie-notice');
-        await page.click('#cookie-notice a.btn');
         await page.waitForSelector('.highcharts-container');
         await delay(2000);
 
