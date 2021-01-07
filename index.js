@@ -973,6 +973,7 @@ async function getStakingInfo() {
         stakingAPR = prices[1];
         bondedSwth = prices[2];
         activeValidators = prices[3];
+        console.log("activeValidators: " + activeValidators);
         marketCap = prices[5];
         totalSupply = prices[6];
         tradeHubSupply = prices[7];
